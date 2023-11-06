@@ -39,7 +39,7 @@ export const getAllEnrolledCourses = catchAsync(async (req, res, next) => {
 
   const enrolledCourses = await Enroll.find({
     student: req.user._id,
-    enrollmentStatus: status,
+    // enrollmentStatus: status,
   }).populate({
     path: "course student",
     select: "-__v",
